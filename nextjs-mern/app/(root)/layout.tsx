@@ -13,7 +13,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
 	title: "Threads",
-	description: "A next.js 13 Meta Threads Application",
+	description:
+		"A next.js 13 Meta Threads Application",
 };
 
 export default function RootLayout({
@@ -28,11 +29,13 @@ export default function RootLayout({
 					<Topbar />
 					{children}
 
-					<main>
+					<main className="flex flex-row">
 						<LeftSidebar />
 
 						<section className="main-container">
-							<div className="w-full max-w-4xl">{children}</div>
+							<div className="w-full max-w-4xl">
+								{children}
+							</div>
 						</section>
 
 						<RightSidebar />
